@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops</title>
+
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css.map">
+
+    <style>
+
+.no-bullets{
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */}
+
+        h1,h2,h3,h4{
+            text-transform: capitalize;
+        }
+    </style>
+
+    <script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./JsLoops.js"></script>
+
+</head>
+<body class="p-2 m-0 text-bg-dark user-select-none">
+    <div class="container-fluid">
+
+<h1 class="text-center mt-1 p-2">JavaScript loops</h1>
+
+<p><code>loops</code> are programing constructs that allow you to <code>repeatedly</code> execute a block of code 
+as long as specified condition is <code>true.</code></p>
+<p><code>loops</code> are essential for <code>automating repetitive tasks</code>,<code>iterating</code> over arrays 
+and processing data effeciently.</p>
+
+<h3>different kinds of loops</h3>
+
+<ul class="no-bullets"><li>for</li>
+<li >for/in</li>
+<li> for/of</li>
+<li >while</li>
+<li >do/while</li></ul>
+
+<h2>the for loop</h2>
+
+<p>the <code>for loop</code> is widely used when you know the exact number of iterations.</p>
+<p>it consists of parts: <code> initialization</code>, <code>condition</code>, and <code>iteration</code></p>
+<p class="ms-5"><strong>syntax:</strong> <br>
+for (initialization; condition; increment / decrement) <br>
+// code block to be executed
+ </p>
+<p><code>initialization</code> this part usually involves declaring and initializing a counter variable, it's executed 
+once before the loop begins.</p>
+<p><code>condition</code> the loop continues to execute as long as this condition evaluates to true. if the condition 
+    becomes false, the loop terminates.</p>
+<p><code>increment/decrement</code> after each iteration, this step updates the counter variable. bringing  you
+     closer to the termination condition</p>
+
+<h2>the for of loop</h2>
+
+<p>the javaScript <code>for of</code> statement loops through the values of an iterable object.</p>
+<p>it lets loop over iterable data sturctures such as arrays, strings, maps, nodelists,and more:</p>
+<p class="ms-5"><strong>syntax:</strong> <br>
+for (variable of iterable){ <br>
+// code block to be executed <br>
+}</p>
+<p><code>variable</code> - for every iteration the value of the next property is assigned to the variable, variable can be declared with <code>const</code>,
+<code>let</code>, or <code>var</code>.</p>
+
+<h4>example</h4>
+
+<p class="ms-5">// array <br>
+const students = ['john' , 'sara' , 'jack']; <br>
+for (let element of students) { <br>
+    console.log(element); <br>
+} <br>
+// output: <br>
+john <br>
+sara <br>
+jack <br>
+</p>
+
+<h2>the for in loop</h2>
+
+<p>the JavaScript <code>for in</code> statement loops through the properties of an Object:</p>
+<p class="ms-5"><strong>// syntax</strong> <br>
+for (key in object) { <br>
+    // code block to be executed <br>
+}</p>
+<p>in each iteration of the loop, a key is assigned to the <code>key</code> variable. the loop continues for 
+all object properties.</p>
+<h4>example</h4>
+
+<p class="ms-5">const cities = { <br>
+    a: "Lahore", <br>
+    b: "Faisalabad", <br>
+    c: "Multan", <br>
+    }; <br>
+for (let key in cities) { <br>
+console.log(key + ": " + cities[key]); <br>
+}; <br>
+// Output: <br>
+a: Lahore <br>
+b: Fiasalabad <br>
+c: Multan
+</p>
+
+<h2>the while loop</h2>
+
+<p>the while loop is the simplest looping construct. it <code>repeatedly executed</code> a block of code 
+as long as a specified condition is true.</p>
+<p>here's its basic syntax:</p>
+<p>while(condition) { <br>
+    // code to be executed as long as the condition is true <br>
+}
+</p>
+<p>the condition is evaluated before each iteration. if it's <code>false</code> initially. the loop wan't execute at all.</p>
+<p class="ms-5">// example: while a variable is less than 10, log it to the console and increment it by 1: <br>
+ <br>
+let i = 1; <br>
+while (i &lt; 10) {<br>
+    console.log(i); <br>
+    i++;
+} <br>
+result will 1 to 9 in numbers</p>
+
+<h2>the do while loop</h2>
+
+<p>the do while loop is a variant of the while loop, this loop will execute the code block 
+    once, before checking if the condition is true, then it will repeat the loop as long as the 
+    condition is true, 
+</p>
+<p class="ms-5"><strong>syntax:</strong>  <br>
+do {
+    // code block to be executed <br>
+} <br>
+while (condition);
+</p>
+
+<h4>example:</h4>
+<p class="ms-5">let i = 1; <br>
+do{ <br>
+    console.log(i); <br>
+i++; <br>
+} while (i &lt; 10);
+</p>
+
+    </div>
+</body>
+</html>

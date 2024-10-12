@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Operators</title>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+   <style>
+    h1,h2,h3{
+        text-transform: capitalize;
+    }
+   </style>
+    <script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="./js operators.js"></script>
+</head>
+<body class="m-0 border-0 p-2 text-bg-dark">
+<div class="contanier-fluid user-select-none">
+
+<h1 class="text-center">JavaScript Operators</h1>
+
+<p>there are different types of <code>JavaScript Operators.</code></p>
+<ul class="row g-3">
+    <li class="col-sm-6">Arthimetic Operators</li>
+    <li class="col-sm-6">Logical Operators</li>
+    <li class="col-sm-6">Assignment Operators</li>
+    <li class="col-sm-6">Ternary Operators</li>
+    <li class="col-sm-6">Comparison Operators</li>
+    <li class="col-sm-6">BItwise Operators</li>
+</ul>
+
+<h3>arithmetic operators</h3>
+
+<p><code>arithmetic operators</code> perform arithmetic an numbers (literals or variables).</p>
+<p class="text-center">let x = 16 + 4 // literals <br>
+let x = a + b ; // veriables</p>
+ <p>the numbers (in an arithmetic operators) are called <code>operands</code>.</p>
+<p>the <code>addition</code> operator <code>(+)</code> adds numbers.</p>
+<p>the <code>subtraction</code> operator <code>(-)</code> subtracts numbers.</p>
+<p>the <code>multiplication</code> operator <code>(*)</code> multiplies numbers.</p>
+<p>the <code>division</code> operator <code>(/)</code> divides numbers.</p>
+<p>the <code>modulus</code> operator <code>(%)</code> returns the division remainder.</p>
+<p class="text-center">let x = 10 % 3; <br>
+// = 1</p>
+<p>the <code>increment</code> operator <code>(++)</code> increments numbers</p>
+<p class="text-center">let x = 5; <br>
+x++; // now x value is 6</p>
+<p>the <code>decrement</code> operator <code>(--)</code> decrements numbers.</p>
+<p class="text-center">let x = 5; <br>
+x--; // now x value is 4</p>
+<p>the <code>exponentiation</code> operator <code>(**)</code> raises the first aperand to the power of the second operand.</p>
+<p class="text-center">let x = 5 ** 2; <br>
+//  5<sup>2</sup></p>
+<p><code>++ increment</code> , <code>--decrement</code> operator can be used as prefix or postfix.</p>
+<p><code>prefix</code> operator first increase/decrease the value in variable and then assign result to other variable.</p> 
+<p><code>postfix</code> operator first assign the value in other value then increase/decrease value in actual variable.</p>
+
+<h3>operators precedence</h3>
+
+<p>operator <code>precendence</code> in JavaScript determines the priority of operators in an operation.</p>
+<p>it determines which operators have higher precedence than others, and thus tells us the order to perform a given mathematical
+     expression. 
+    consider following expression.
+</p>
+<p class="text-center">let x = 5 + 2 * 3 - 2 / 2 ;</p>
+<p>the evaluation of above expression depends on <code>BODMAS</code> rule.</p>
+
+<h3>BODMAS rule</h3>
+<p><strong><code>B-</code> </strong>bracket first </p>
+<p><strong><code>O-</code> </strong>order i.e powers and square roots etc </p>
+<p><strong><code>DM-</code> </strong>division and multiplication (left to right) </p>
+<p><strong><code>AS-</code> </strong>addition and subtraction (left to right) </p>
+<p class="text-center"> let x = 5 + 2 * 3 - 2 / 2; <br>
+// result wil be 10</p>
+<p>var a = 5 + 2* (3 - 2) / 2; // result  6</p>
+<p>5-2 with brackets will be evaluated first, result 1.</p>
+<p>2* result of (3 -2) so 2 * 1. result 2.</p>
+<p>result of 2*(3-2) divide by 2 so 2 / 2. result 1.</p>
+<p>5 + result of 2* (3-2)/ 2. so 5 + 1, result 6</p>
+
+<h3>assignment operators</h3>
+
+<p>the <code>assignment operator (=)</code> assigns a value to a vairable;</p>
+<p class="text-center">let x = 25; <br>
+// assigns value 25 to x</p>
+<table class="table"><th>operator</th><th>example</th> <th>same as</th>
+<tr><td>=</td><td>x = y</td><td>x = y</td></tr>
+<tr><td>+=</td><td>x += y</td><td>x = x + y</td></tr>
+<tr><td>-=</td><td>x -= y</td><td>x = x -y </td></tr>
+<tr><td>*=</td><td>x *= y</td><td>x = x *y </td></tr>
+<tr><td>/=</td><td>x /= y</td><td>x = x /y </td></tr>
+<tr><td>%=</td><td>x %= y</td><td>x = x %y </td></tr>
+<tr><td>**=</td><td>x **= y</td><td>x = x **y </td></tr></table>
+
+<h3>Comparison operators</h3>
+
+<p><code>comparison</code> operators are used in logical statements to determine eqaulity or diiference between variables
+     or values</p>
+<p>given that <code>x = 5 ,</code> the table below explains the <code> comparison</code> operators</p>
+<table class="table">
+<tr><th>operator</th><th>description</th><th>comparing</th><th> returns</th></tr>
+<tr><td>==</td><td>equals to </td><td>x == 8</td><td><code>false</code></td></tr>
+<tr><td>==</td><td>equals to</td><td>x == 5 </td><td>true</td></tr>
+<tr><td>==</td><td>equals to</td><td>x == "5"</td><td>true</td></tr>
+<tr><td>===</td><td>eqaul value and equal type</td><td>x === 5</td><td>true</td></tr>
+<tr><td>===</td><td>equal value and eqaul type</td><td>x === "5"</td><td><code>false</code></td></tr>
+<tr><td>! =</td><td>not equal</td><td>x ! = 8</td><td>true</td></tr>
+<tr><td>! ==</td><td>not equal value or not equal type</td><td>x !== 5</td><td><code>false</code></td></tr>
+<tr><td>></td><td>greater than</td><td>x > 8</td><td><code>false</code></td></tr>
+<tr><td>&lt;</td><td>less than</td><td>x &lt; 8</td><td>true</td></tr>
+<tr><td>>=</td><td>greater than or equal to</td><td>x >= 8</td><td><code>false</code></td></tr>
+<tr><td>&lt;=</td><td>less than or equal to</td><td>x &lt;= 8</td><td>true</td></tr>
+</table>
+
+<h3>logical operators</h3>
+
+<p><code>logical</code> operators are used to determine the logic between variables or values.</p>
+<p>given that <code>x = 6</code> and <code>y = 3</code>, the table below explains the logical operators.</p>
+
+<table class="table">
+    <tr><th>operator</th><th>description</th><th>example</th></tr>
+<tr><td>&&</td><td>and</td><td>(x &lt; 10 && y > 1) is true</td></tr>
+<tr><td>||</td><td>or</td><td>(x == 5 || y == 5) is <code>false</code></td></tr>
+<tr><td>!</td><td>not</td><td>!(x == y) is true</td></tr>
+</table>
+
+<h3>ternary operators</h3>
+
+<p>javaScript also cotains a condditional <code>(ternary)</code> operator that assigns a value to a variable based on some condition.</p>
+<p class="text-center">// Syntax <br>
+variablename = (condition) ? value1:value2</p>
+<p class="text-center">
+//example <br>
+let votealbe = (age > 18) ? <code> "too young":"old enough"</code>;    
+</p>
+<p>if the variable <code>age</code> is a value <code>below 18</code>,</p>
+<p>the value of the variable voteable will be <code>"too young"</code>.</p>
+<p>otherwise the value of variable will be <code> "old enough"</code></p>
+  
+<h3>bitwise operators</h3>
+
+<p>bitwise operators are considered <code>more advanced</code> and niche in JavaScript. for simplicity, we'll be concentrating
+     on <code>fundamental concepts</code>.</p>
+<p>for many web developers, bitwise operators are <code>relatively insignificant</code> in day-to-da6 programing tasks.</p>
+
+
+
+</div>    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript variables</title>
+   
+   <style> 
+   .width{max-width: 100%;
+min-width: auto;}
+    h1{text-transform: capitalize;}
+    h2{text-transform: capitalize;}
+    h3{text-transform: capitalize;}
+   </style>
+
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+
+<script src="./jsvariables.js"></script>
+</head>
+<body class="text-bg-dark user-select-none">
+
+<div class="container-fluid">
+
+<h1 class="text-center fs-1">javaScript <code class="fs-1">variables</code></h1>
+<p><code>variables </code>are containers for storing data values.</p>
+<p><code>variables </code>are used to store information to be referenced and manipulated in a program.</p>
+<p>A <code>variables</code> is assigned a value in one place and then used repetitively.</p>
+<p>you can declare a variable using the <code>var</code>, <code>let</code>, or <code>const</code> keyword.</p>
+<p>the <code>var</code> keyword was used in all javaScript code from 1995 to 2015.</p>
+<p>the <code>let</code> and <code>const</code> keywords were added to JavaScript in 2015 to now a days</p>
+<p>the <code>var</code> keyword should only be used in code written for older browsers.</p>
+<p>JavaScript variables can hold <code>numbers</code> like 100 and <code>text values</code> like "smash code"</p>
+<p>in programming, text values are called <code>text strings.</code></p>
+<p>javaScript can handle many types of data, but for now, just think of <code>numbers</code> and <code>strings</code>.</p>
+<p>strings are written inside double or single quotes. numbers are written without quotes.</p>
+<p>if you put a number in quotes, it will be treated as a text string.</p>
+
+<h3>declaring a <code>variable</code></h3>
+
+<p><img class="float-md-end mx-auto p-3 width" src="../assest/let username pic.JPG" alt="example of declaring variable"></p>
+<p>you can <code>declare</code> and <code>initialize</code> in single line or you can do that in two line</p>
+<p>you can declare many variables in one statement. start the statement with let and separate the variables by comma</p>
+<p>as with algebra, you can do arithmetic with JavaScript variables, using <code>operators</code> like - and +:</p>
+<p>you can also add strings, but strings wil be <code> concatenated</code>.</p>
+
+<h3>javaScript <code>let</code></h3>
+
+<p>the <code>let</code> keyword was introduced in ES6 (2015) </p>
+<p>variables declared with let have <code>bock scope</code></p>
+<p>variables declared with <code>let</code> must be declared before use.</p>
+<p>variables declared with <code>let</code> cannot be <code>redeclared</code> in the same scope</p>
+
+<h3>block scope</h3>
+
+<p>variables declared inside a <code>{ }</code> block cannot be accessed from outside the block</p>
+
+<h3>global scope</h3>
+
+<p>variables declared with the <code>var</code> always have <code>global scope</code></p>
+<p>variables declared with <code>var</code> keyword can NOT have <code>block scope</code></p>
+<p>variables declared with <code>var</code> inside a block <code>{ } </code> can be accessed from outside the block:</p>
+
+<h3>redeclaring variable</h3>
+
+<p>vairables defined with <code>let</code> can not be redeclared.</p>
+<p>variables defined with <code>var</code> can be redeclared.</p>
+
+<h3>redeclaring variable using <code>var</code></h3>
+
+<p>redeclaring a variable using the <code>var</code> keyword can impose problums.</p>
+<p>redeclaring a variable inside a block will also redeclare the variable outside the block</p>
+
+<h3>hoisting</h3>
+
+<p>hoisting is a javaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.</p>
+<p>so <code>var</code> variables are hoisted to the top of their scope and initialized with a value of undefined.</p>
+<p>just like <code>var</code>, <code>let</code> and <code>const</code> declarations are hoisted ot the top.</p>
+<p>unlike <code>var</code> which is initialized as undefined. the <code>let</code> and <code>const</code>
+keywords are not initialized.</p>
+<p>so if you try to use a <code>let</code> or <code>const</code> variable before declaration, you'll get a 
+refernce <code>Error</code>.</p>
+
+<h3>javaScript <code>const</code></h3>
+
+<p>the <code>conts</code> keyword was introduced in ES6 (2015)</p>
+<p>variables defined with const cannot be  <code>redeclared</code>.</p>
+<p>variables defined with conts cannot be <code>reassigned</code>.</p>
+<p>variables defined with const have <code>block scope</code></p>
+
+<h3>reassigning variable</h3>
+
+<p>a <code>const</code> variable cannot be reassigned</p>
+<p>variables with <code>var</code> or <code>let</code> can be reassigned</p>
+<p>javaScript <code>const</code> variables must be assigned a value when they are declared</p>
+
+<h3>when to use <code>JavaScript const ?</code></h3>
+
+<p>always declare a variable with <code>const</code> when you know that the value should not be changed.</p>
+<p>use <code>const</code> when you declare:</p>
+<ul><li>a new Array</li>
+<li>a new Object</li>
+<li>a new Function</li>
+<li>a new RegExp</li></ul>
+
+<h3>var, let and const</h3>
+
+<table class="table col-md-4 mx-auto float-md-end">
+    <tr><th></th><th>block scope</th><th>redeclare</th><th>reassign</th> <th>hoisted</th></tr>
+    <tr><td>var</td><td>no</td><td>yes</td><td>yes</td><td>yes</td></tr>
+    <tr><td>let</td><td>yes</td><td>no</td><td>yes</td><td>no</td></tr>
+    <tr><td>const</td><td>yes</td><td>no</td><td>no</td><td>no</td></tr>
+</table>
+
+
+
+</div>    
+</body>
+</html>

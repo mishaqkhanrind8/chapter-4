@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js numbers</title>
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+
+<style>
+h1, h2, h3{text-transform: capitalize;
+} </style>
+<script src="./js numbers.js"></script>
+</head>
+<body class="text-bg-dark m-0 p-2 user-select-none">
+    <div class="container-fluid">
+<h1 class="text-center">javaScript <code>numbers</code></h1>
+
+<p>all javaScript numbers are stored as decimal numbers (floating point).</p>
+<p>numbers can be written with or without decimals</p>
+<p>extra large small numbers can be written with scientific (exponential) notation.</p>
+
+<h3>NaN</h3>
+
+<p><code>NaN</code> (not a number) is a JavaScript reserved word indicating that a number is not a legal number:</p>
+<p>trying to do arithimatic with a non-numaric string will result in <code>NaN</code> (not a number);</p>
+
+<h3>infinity </h3>
+
+<p>infinity (or -infinity) is the value JavaScript will return if you calculate a number outside the largest 
+    possible number.
+</p>
+<p>division by 0 (zero) also generates infiniy;</p>
+
+<h3>JavaScript <code>data types</code></h3>
+
+<p>in programming, data types is an important concept.</p>
+<p>to be able to operate on variables. it is important to know something about the type.</p>
+<p>without data types a computer cannot safely solve this;</p>
+<p>does it make any sense to add <code>"sufiyan"</code> to <code>"16"</code>? will it produce an error or will it produce a result?</p>
+<p>JavaScript evaluates expressions form <code>left to right</code>. different sequences can produce different result;</p>
+<p>in the first example, JavaScript treats <code>16</code> and <code>4</code> as <code>numbers</code>, until it reaches "sufiyan".</p>
+
+<h3>JavaScript <code>bigint</code></h3>
+
+<p>all JavaScript numbers are stored in a a 64-bit floating-point format.</p>
+<p>JavaScript Bigint is new datatype (ES2020) that can be used to store integer values that are too big 
+    to be represented by a normal JavaScript Number.
+</p>
+
+<h3>JavaScript <code>Boooleans</code></h3>
+<p>booleans can only have two values ; <code>true or false.</code></p>
+<p><strong>note</strong> <code>'==' assigns</code> value to a variable.</p>
+<p><code>'==' compares</code> two variables for equality.</p>
+
+<h3>JavaScript <code>undefined</code></h3>
+
+<p>in JavaScript, a variable without a value, has the value <code>undefined.</code> the type is also undefined.</p>
+<p>any variable can be emptied by setting the value to undefined. the type of will also be undefined.</p>
+
+<h4>Empty values</h4>
+
+<p>an empty value has nothing to do with <code>undefined. </code>
+    <p>an empty string has both a <code>legal value</code> and a <code>type</code>.</p>
+</p>
+
+ <h3>JavaScript <code> Null</code></h3>
+
+ <p><code> null</code> is an object.</p>
+<p>JavaScript never sets a value to <code> null</code>. that must be done programmatically.</p>
+  <p>it can be assigned to a variable as a representation of no value.</p>
+  <p>for example, when you don't know the value initially you can assign a null to a variable. let's see and example.</p>
+
+  <h3><code>undefined</code> vs <code>null</code></h3>
+
+<p><code>undefined</code> means a variable has been declared but has not yet been assigned a value.</p>
+<p><code>null</code> is and assignment value . it can be assigned to a variable as a representation of no vale.</p>
+<p><code>undefined</code> and <code>null</code> are two distinct types; undefined is a type itself (undefined) while null is and object.</p>
+
+<h3>types are <code>Dynamic</code></h3>
+
+<p>javaScript has dynamic types.</p>
+<p>this means that the same variable can be used to hold different data types;</p>
+
+<h3>javaScript <code>array</code></h3>
+
+<p>an <code>array</code> is a special variable, which can hold more than one value.</p>
+<p><code>JavaScript arrays</code> are wirtten with square brackets and separted by commas.</p>
+<p>the following code declares (creates) and array called cars. containing three items (car names)</p>
+
+<h3>JavaScript <code>object</code></h3>
+
+<p>a javaScript <code>object</code> is a collection of named values.</p>
+<p>object values are written as name : value pairs (name and value spreted by a colon).</p>
+<p>it is a common practice to declare objects with the <code>const</code> keyword.</p>
+<p>the named values, in JavaScript objects, are called <code>properties</code>.</p>
+
+<h3>JavaScript <code>primitives</code></h3>
+
+<p>a <code>primitve value</code> is a value that has no properties or methods.</p>
+<p><code>3.14</code> is a primitve value</p>
+<p>a <code>primitve data type</code> is data that has a primitive value.</p>
+<p>primitive values are <code>immutable</code> (they are hardcoded and cannot be changed).</p>
+<p>JavaScript defines 7 types of <code>primitive data types:</code></p>
+<ul><li>string</li>
+<li>number</li>
+<li>booolean</li>
+<li>null</li>
+<li>undefined</li>
+<li>symbol</li>
+<li>bigint</li>
+</ul>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Date Objects</title>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        h1,h2,h3,h4{
+            text-transform: capitalize;
+        }
+    </style>
+    <script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js date object.js"></script>
+</head>
+<body class="text-bg-dark user-select-none p-2 m-0 border-0">
+    <div class="container-fluid">
+
+<h1 class="text-center">indtroduction</h1>
+
+<p>JavaScript is often used in web development for tasks involving <code>dates and times</code>.</p>
+<p>this includes creating features like <code>calenders</code>,<code>train schedules</code>, <code>appointment setters</code>, and 
+interfaces that display relevant times based on the <code>user's timezone</code>.</p>
+<p>to achieve these objectives and more, JavaScript comes with the built in <code>date object</code> and related <code>methods</code></p>
+
+<h2>creating date objects</h2>
+
+<p>Date object are created with the <code>new date()</code> constructor:</p>
+<p>there are 9 ways to create a new date object:</p>
+<p class="ms-5">
+    new Date() <br>
+new Date(date string) <br>
+new Date(year, month) <br>
+new Date(year,month,day) <br>
+new Date(year,month,day,hours) <br>
+new Date(year,month,day,hours,minutes) <br>
+new Date(year,month,day,hours,minutes,seconds) <br>
+new Date(year,month,day,hours,minutes,seconds,ms) <br>
+new Date(milliseconds)
+</p>
+
+<h2>date objects</h2>
+
+<p><code>new Date()</code> creates a date object with the current date and time:</p>
+<p class="ms-5">const d = new Date(); <br>
+console.log(d); // thu mar 07 2024 10:50:45 GMT+0500 (Pakistan Standard Time)</p>
+<p><code>new Date(date string)</code> creates a date object from a date string:</p>
+<p class="ms-5">const d = new Date("October 13, 2014 11:13:00"); <br>
+console.log(d); // mon oct 13 2014 11:13:00 GMT+0500 (Pakistan Standard Time)</p>
+<p><code>new Date(year, month, ...)</code> creates a date object with a specified date and time.</p>
+<p>7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order);</p>
+<p class="ms-5">const d = new Date(2018, 11, 24, 10, 20, 30, 0); <br>
+console.log(d); // mon dec 24 2018 10:20:30 GMT+0500 (Pakistan Standard Time)</p>
+<p>JavaScript counts months from 0 to 11. <code>(January = 0, December = 11)</code></p>
+<p>Specifing a month heigher than 11, will not result in an error but add the overflow to the next year,</p>
+<p>JavaScript stores Dates as <code>milliseconds</code>.</p>
+<p>JavaScript stores dates as number of milliseconds since January 01, 1970.</p>
+<p>zero time is January 01, 1970 00:00:00 UTC.</p>
+<p>One day (24 hours) is 86 400 000 milliseconds.</p>
+<p>Now the time is: 17097973930345 milliseconds past January 01, 1970.</p>
+<p><code>new Date(milliseconds)</code> creates a new date object as milliseconds plus zero time;</p>
+<p>01 January 1970 plus 100 000 000 000 milliseconds is :</p>
+<p class="ms-5">const d = new Date (100000000000); <br>
+console.log(d); // Sat Mar 03 1973 14:46:40 GMT+0500 (Pakistan Standard Time)
+</p>
+<p>January 10 1970 minus 100 000 000 000 milliseconds is :</p>
+<p class="ms-5">const d = new Date(-100000000000); <br>
+console.log(d); // Mon Oct 31 1966 19:13:20 GMT+0500 (Pakistan Standard Time)</p>
+
+<h2>date methods</h2>
+
+<p>when date object is created, a number of <code>methods</code> allow you to operate an it.</p>
+<p>date methods allow you to <code>get</code>and <code>set</code> the year, month, day, hour, minute, second,and millisecond of date 
+object using either local time or UTC (universal, or GMT) time</p>
+
+<h2>date get methods</h2>
+
+<p>the <code>getFullYear()</code> method returns the year of a date as a four digit number:</p>
+<p>the <code>getMonth()</code> method returns the month of a date as a number (0-11):</p>
+<p>the <code>getDate()</code> method returns the day of a date as a number (1-31)</p>
+<p class="ms-5">const d = new Date(); <br>
+d.getFullYear(); // 2024 <br>
+d.getMonth(); // 10 <br>
+// to get the correct month number , you must add 1</p>
+<p>the <code>getDay()</code> method returns the weekday of a date as a number (0-6).</p>
+<p>in JavaScript, the first day of the week <code>(day 0)</code> is <code>sunday</code>.</p>
+<p>the getTime() method returns the the number of milliseconds since January 1. 1970.</p>
+<p class="ms-5">const d = new Date(); <br>
+d.getDay(); // 5 <br>
+d.getTime(); // 1709l894245145 </p>
+<p>the <code>getHours()</code> method returns the hours of a date as a number (0-23).</p>
+<p>the <code>getMinutes()</code> method returns the minutes of a date as a number (0-59).</p>
+<p>the <code>getSeconds()</code> method returns the seconds of a date as a number (0-59)</p>
+<p>the <code>getMilliseconds()</code> method returns the milliseconds of a date as a number(0-999).</p>
+<p class="ms-5">const d = new Date(); <br>
+d.getHour(); <br>
+d.getMinutes(); <br>
+d.getSeconds(); <br>
+d.getMilliseconds();</p>
+
+<h2>UTC date get methods</h2>
+
+<p><code>UTC</code> methods use UTC time (Coordinated Universal Time)</p>
+<p><code>UTC</code> time is the same as GMT (Greenwich Mean Time)</p>
+<table class="table">
+    <tr><th>method</th><th>description</th></tr>
+    <tr><td>getUTCDate()</td><td>Returns the UTC date</td></tr>
+    <tr><td>getUTCHours()</td><td>Returns the UTC hour</td></tr>
+    <tr><td>getMinutes()</td><td>Returns the UTC minutes</td></tr>
+    <tr><td>getSeconds()</td><td>Returns the UTC seconds</td></tr>
+</table>
+
+<h2>date set methods</h2>
+
+<p>set date methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds)
+     for a date object</p>
+<p>the <code>setFullYear()</code> method sets the year of a date object, in this example to 2020.</p>
+<p class="ms-5">const d = new Date(); <br>
+d.setFullYear(2020);</p>
+<p>the <code>setFullYear()</code> method can optionally set month and day:</p>
+<p class="ms-5">d.setFullYear(2020, 11, 3); <br>
+console.log(d) // Thu Dec 03 2020 15:46:11 GMT+0500 (Pakistan Standard Time)</p>
+
+<table class="table">
+    <tr><th>method</th><th>description</th></tr>
+    <tr><td>setDate()</td><td>Set the day as a number (1 -31)</td></tr>
+    <tr><td>setHours()</td><td>Set the hour (0-23)</td></tr>
+    <tr><td>setMinutes()</td><td>Set the minutes (0 -59)</td></tr>
+    <tr><td>setSeconds()</td><td>Set the seconds (0 -59)</td></tr>
+    <tr><td>setMonth()</td><td>Set the month (0 -11)</td></tr>
+    <tr><td>setTime()</td><td>Set the time (milliseconds since January 1, 1970)</td></tr>
+</table>
+
+
+
+    </div>
+</body>
+</html>

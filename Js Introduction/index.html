@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript</title>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+    <style>
+        h1{text-emphasis-color: white;
+        font-size: 3em;
+    text-transform: capitalize;}
+    h2{text-emphasis-color: white;
+        font-size: 2em;
+    text-transform: capitalize;}
+    h3{text-emphasis-color: white;
+    font-size: 1.5em;
+text-transform: capitalize;}
+    </style>
+<script src="./introductiontojs.js"></script>
+    <script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</head>
+<body class="m-0 border-0 text-bg-dark user-select-none">
+<div class="container-fluid">
+
+    <h1 class="text-center mt-2 mb-3 capitalize">introduction to JavaScript</h1>
+
+    <script>//your JavaScript goes here</script>
+
+    <p>JavaScript is a hight-level, interpreted <code>programming language</code></p>
+<p>one of the three core technologies of world wide web content production, alongside <code>HTML</code> and <code>CSS</code></p>
+<p>enables websites to respond to user actions in real-time</p>
+<p>javaScript runs on users' web browsers, allowing it to work on the <code>client side</code></p>
+<p>enhance the user experience without server interaction</p>
+<p>offers a wealth of pre-built libraries and frameworks like <code>react</code> and <code>angular</code></p>
+
+<h2>client-side vs. server-side </h2>
+
+<p>when javascript is used on a web page, it is executed in web browsers. in this case, javaScript works as a <code>client-side language</code> </p>
+<p>javaScript can run on both web browsers and servers. a popular JavaScript server-side environment is <code>node.js</code></p>
+<p>unlike client-side JavaScript, server-side Javascript executes on the server and allows you to access datasbases, file systems, etc.</p>
+<h2>adding JavaScript</h2>
+<p>in HTML, JavaScript code is inserted between <code>&lt;script&gt; &lt;/script&gt;</code> tags.</p>
+<p>you can place any number of scripts in and HTML document.</p>
+<p>Scripts can be placed in the <code> &lt;body&gt;</code>, or in the &lt;head&gt; section of and HTML page, or in both</p>
+<h2>external JavaScript</h2>
+<p>scripts can also be placed in external files</p>
+<p>first create a file whose extension is ,js e.g.. <code>myscript.js</code> and place it in the js subfolder, note that placing JavaScript file 
+in the js folder is not required however it is a good practice.</p>
+<p>then, use the <code>URL</code> to the JavaScript source code file in the src attribute of the <code>&lt;script&gt;</code> element.</p>
+
+<div class="row p-2"><div class="text-bg-light bg-gradient col-md-6 border border-1 border-success rounded p-2"><h2 class="text-bg-danger rounded p-3">index.html</h2>
+<p>&lt;script src="myscript.js"&gt;<br>
+&lt;script&gt;
+</p>
+<p class="text-success text-center">&lt;!--You can place an <br> external script refrence in <br> &lt;head&gt; or &lt;body&gt; as you <br> like. --&gt;</p></div>
+
+<div class="text-bg-light bg-gradient col-md-6 border border-1 border-success rounded p-2"><h2 class="text-bg-danger rounded p-3">External file: myScript.js</h2>
+    <p>alert ("hello world"); </p>
+   </div>
+</div>
+<h3>let's <code>smash</code> the code</h3>
+<ul><li>javaScript in <code>head</code> </li>
+<li>javaScript in <code> body</code></li>
+<li><code> External</code> javaScript</li></ul>
+ 
+</div>    
+
+
+</body>
+</html>

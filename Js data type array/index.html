@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js data type array</title>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+    <style>
+        h1,h2,h3{
+            text-transform: capitalize;
+            font-style: italic;
+        }
+    </style>
+    <script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./array.js"></script>
+</head>
+<body class="m-0 p-2 border border-0 text-bg-dark">
+<div class="container-fluid user-select-none">
+
+    <h1 class="text-center fw-bold">js data type array</h1>
+
+<p>an <code>array</code> is a special variable, which can hold more than one value.</p>
+<p>arrays are a special type of objects. the typeof operator in JavaScript returns <code>"object"</code> for arrays.</p>
+<p>the following code declares (creates) an array called cars, containing three items (car names)</p>
+<p class="text-center"> const cars = {<code>"saab" , "volvo", "BMW"</code>};</p>
+<p>if you have a list of items (a list of car names, for example), storing the cars in single variables could look like 
+    this:</p>
+<ul>
+    <li class="d-flex justify-content-center">let car-1 = <code>"saab"</code>;</li>
+    <li class="d-flex justify-content-center">let car-2 = <code>"volvo"</code>;</li>
+    <li class="d-flex justify-content-center">let car-3 = <code>"BMW"</code>;</li>
+</ul>
+<p>however, what if you want to loop through the cars and find a specific one? and what if you had not 3 cars,
+    but <code>300?</code></p>
+<p class="h4"><code>the solution is an array</code></p>
+<p>an array can hold many values under a single name, and you can access the values by referring to an index number.</p>
+ 
+<h3>creating an <code>array</code></h3>
+
+<p>using an array literal is the easiest way to create a JavaScript array</p>
+<ul>
+    <li class="d-flex justify-content-center">//syntax</li>
+    <li class="d-flex justify-content-center">const array-name = {item, itme2 ...}; </li>
+</ul>
+<p>it is common practice to declare arrays with the <code>const</code> keyword.</p>
+<p>array indexes are <code>zero-based</code> which means the first item is [0], 
+second is [1], and so on.</p>
+<p class="text-center">const students = {<code>"Ahsan","Wasim", "Amad"</code>}; </p>
+ <div class="row">
+    <p class="col-sm-6">spaces and line breaks are not <br> important. a declaration can span <br> multiple lines:</p>
+    <p class="col-sm-6 text-center">const colors = {<br>
+   <code> "white", <br>   
+    "red",<br>
+"green",    <br></code>
+    }; </p>
+<p class="col-sm-6">you can also create an array, and <br> then provide the elements.</p>
+<p class="col-sm-6 text-center"> const colors = [ ];<br>
+cars[0] =<code> "white";</code> <br>
+cars[1] =<code> "red";</code> <br>
+cars[2] =<code> "green";</code> </p>
+
+
+<h3>accessing and changing array elements</h3>
+
+<p class="col-md-6">you can access and change array element by referring to the index number.</p>
+<p class="col-md-6 text-center">const students = [<code>"Asad",<br>
+"Sajid", "Babar"</code>];<br>
+let first-student = students{0};<br><br>
+//changing array element <br>
+students{0}= <code>"Noman"</code><br><br>
+now students [0] will result Noman
+</p>
+</div>
+
+<h3>arrays are <code>objects</code></h3>
+
+<p>arrays are a special type of objects, the <code>typeof operator</code> in JavaScript returns "object"
+for arrays. </p>
+<p>but, JavaScript arrays are best described as arrays.</p>
+<p>arrays use <code>numbers</code> to access its "elements" .</p>
+<p class="text-center">const person = ["john", "Doe", 46 ]; </p>
+<p class="text-center">person{0} //returns John</p>
+<p>objects use <code>names</code> to access its "numbers:,</p>
+<p class="text-center">const person = {firstName: "john", lastname: "Doe", age:46}; </p>
+<p class="text-center">person.firstName //returns John;</p>
+
+<h3><code>array</code> elements can be <code>objects</code></h3>
+
+<p>JavaScript variables can be objects. arrays are special kinds of objects.</p>
+<p>because of this, you can have variables of different types in the same arrays.</p>
+<ul><li>you can have <code>objects</code> in an array.</li>
+<li>you can have <code>functions</code> in an array.</li>
+<li>you can have <code>arrays</code> in an array:</li></ul>
+
+<h1 class="text-center my-5">array properties and methods</h1>
+
+<h3>the <code>length</code> property</h3>
+
+<p>the length property of an array returns the length of an array (the number of array elements).</p>
+<p>const fruits = ["banana", "orange" , "apple" , "mango"]; </p>
+<p>let length = fruits.length; //ruturns 4</p>
+<p>the length porperty is always one more than the highest array index.</p>
+
+<h4><code> accessing the first array element</code></h4>
+
+<p>const fruits = ["banana", "orange", "apple", "mango"]; <br>
+let fruit_first = fruit[0]; <br>
+//result : banana</p>
+
+<h4><code>accessing the last array element</code></h4>
+
+<p>const fruits = ["banana", "orange", "apple", "mango"]; <br>
+    let fruit_last = fruit[fruits.length -1]; <br>
+    //result : mango</p>
+
+<h4><code>converting on array to a string</code></h4>
+
+<p>the JavaScript method <code>toString()</code> converts an array to string of 
+(comma seprated) array values.</p>
+<p>const students = ["asad", "sajid", "babar"]; <br>
+let x = students.toString(); <br>
+//result : x = "asad, sajid, babar" (string)</p>
+
+<h4><code>javaScript array join()</code></h4>
+
+<p>the <code>join()</code> method also joins all array elements into a string.</p>
+<p>it behaves just like <code>toString()</code> but in addition you can specify the <code>seprator:</code></p>
+<p> const fruits = ["banana", "orange", "apple", "mango"]; <br>
+console.log= fruits.join(" * "); <br>
+//result : banana * orange * apple * mango</p>
+
+<h3>the pop() method</h3>
+
+<p>the <code>pop()</code> method removes the last element from an array</p>
+<p>const fruits = ["banana", "orange", "apple", "mango"]; <br>
+    fruits.pop();</p>
+<p>the pop() method returns the value that was "popped out".</p>
+<p>fruit.pop(); //returns Mango</p>
+
+<h3>the push() method</h3>
+
+ <p>the <code>push() </code>method adds a new element to an array (at the end).</p>
+ <p>const fruits = ["banana", "orange", "apple", "mango"]; <br>
+    fruits.push("peach");</p>
+<p>console.log = fruits;<br>
+result : Banana, Orange, Apple, Mango, peach</p>
+
+<h3>the shift() method</h3>
+
+<p>the <code>shift()</code> method removes the first array element and "shifts" all other elements to a lower index</p>
+<p><code>shift()</code> is similiar to <code>pop()</code>. but works on the first element instead of the last.</p>
+<p>const fruits = ["banana", "orange", "apple", "mango"]; <br>
+    fruits.shift();</p>
+<p>the <code>shift()</code> method returns the value that was "shifted out",</p>
+<p>fruits.shift(); //returns Banana</p>
+
+<h3>the unshift() method</h3>
+
+<p>the <code>unshift()</code> method adds a new element to an array (at the beginning), and "unshifts" older elements;</p>
+<p>const fruits = ["banana", "orange", "apple", "mango"]; <br>
+    fruits.unshift("peach");</p>
+<p>console.log= fruits;<br>
+result: peach, banana, orange, apple, mango.</p>
+
+<h3>the delete() method</h3>
+
+<p>the <code>delet()</code> method is used to remove an element from an array.</p>
+<p>note: using <code>delete()</code> leavs undefined holes in the array. use <code>pop()</code> or <code>shift()
+
+</code> instead.</p>
+<p>const fruits = ["banana", "orange", "apple", "mango"]; <br>
+    delete.fruits[2];</p>
+<p>console.log= fruits;<br>
+result: peach, banana, empty, apple, mango.</p>
+
+<h3>concat () Method</h3>
+
+<p>the <code>concat()</code> method creates a new array by merging (concatenating) existing arrays.</p>
+<p>the <code>concat()</code> method does not change the existing arrays. it always returns a new array.</p>
+<p class="text-center"> const arr1 = {11, 12 ,13};</p>
+<p class="text-center"> const arr2 = {14, 15 ,16};</p>
+<p class="text-center"> const newarr = arr1.concat(arr2);</p>
+<p class="text-center">result: 11, 12, 13, 14, 15, 16</p>
+
+<h3>flattening an array</h3>
+
+<p>flattening an array is the process of reducing the dimensionality of an array.</p>
+ <p>flattening is useful when you want to convert a multi-dimensional array into a one-dimentional array.</p>
+<p>the <code>flat()</code> method creates a new array with sub-array elements conceatenated to a specified depth.</p>
+<p class="text-center">const myarr = [[1,2],[3,4],[5,6]];<br>
+const newarr = myarr.flat();<br>
+result: 1, 2, 3, 4, 5, 6</p>
+
+<h3>the splice() method</h3>
+
+<p>the <code>splice()</code> method is used to insert and remove elements at the same time in between the array.</p>
+<h4 class="ps-5">syntax</h4>
+<p class="text-center">array.spice (start, delecount, item1, item2) <br>
+const fruits = ["banana", "orange", "apple", "mango"];<br>
+fruits.splice(2, 1, "lemon", "kiwi"); <br>
+console.log(fruits) <br>
+returns: 'banana', 'orange', 'lemon', 'kiwi', 'mango'</p>
+
+<h3>the slice() method</h3>
+
+<p>the <code>slice()</code> method returns a new array containing a portion of the original array. based on the start and end
+     index provided as arguments.</p>
+
+<h4 class="ps-5">syntax</h4>
+
+<p class="text-center">array.slice (startindex, endindex);</p>
+<p>when the <code>slice()</code> method is given two arguments. it selects array elements from the start argument, and up to 
+    (but not include) the end argument.</p>
+<p class="text-center"> const arr = [1, 2, 3, 4, 5, 6, 7, 8]; <br>
+arr.slice(4, 7); <br>
+// retuns 5, 6, 7</p>
+<p>if the end argument is omitted, the <code>slice()</code> method slices out the rest of the array.</p>
+<p>the <code>slice()</code> method creates a new array.</p>
+<p>the <code>slice()</code> method does not remove any elements from the source array.</p>
+
+<h3>the indexOf() method</h3>
+
+<p>the <code>indexOf()</code> method searches an array for an element value and returns its position.</p>
+<p class="text-center">array.indexOf(item,start)</p>
+<p><code>item</code> (required); the item to search or,</p>
+<p><code>start</code> (Optional); where to start the search negative values will start at the given position counting from the
+     end, and search to the end.</p>
+<p class="text-center">const fruits = ["banana", "orange", "apple", "mango"]; <br>
+fruits.indexOf("mango") // returns 3</p>
+<p><code>array.indexOf()</code> returns -1 if the item is not found.</p>
+<p>if the item is present more than once. it returns the position of the first occurrence.</p>
+<p class="text-center">const fruits = ["banana", "orange", "apple", "mango", "banana"]; <br>
+fruits.indexOf("peach") // returns -1 <br>
+fruits.indexOf("banana")  // returns 0 <br>
+fruits.indexOf("banana", 2)  // returns 4</p>
+
+<h3>the lastIndexOf() method</h3>
+
+<p><code>array.lastIndexOf()</code> is the same as <code>array.indexOf()</code> but returns the position of the last occurrence
+     of the spacified element.</p>
+
+ <h3>sorting and reversing</h3>
+
+<p>the <code>sort()</code> method sorts an array alphabetically:</p>
+<p class="text-center">
+    const fruits = ["banana", "orange", "apple", "mango", "banana"]; <br>
+    fruits.sort() <br>
+    // result : 'apple' , 'banana' , 'banana', 'mango', 'orange'
+</p>
+<p>the <code>reverse()</code> method reverses the elements in an array; </p>
+<p class="text-center">
+    const arr = [1,2,3,4,5,6,7,8];<br>
+    arr.reverse();<br>
+   // returns: 8,7,6,5,4,3,2,1
+</p>
+
+<h3>the toSorted() method</h3>
+
+<p>ES2023 added the <code>toSorted()</code> method as a safe way to sort an array without altering the original array.</p>
+<p>the diffeence between <code>toSorted()</code> and <code>sort()</code> is that the first method creates a new array. keeping
+     the original array unchanged. while the last method alters the original array.</p> 
+<p class="text-center">
+    consst months = ["jan", "feg", "mar", "apr"]; <br>
+    const sorted = months.toSort(); <br></p>
+
+<h3>numeric sort</h3>
+
+<p>by default, the <code>sort()</code> function sorts values as trings.</p>
+<p>this works well for strings ("apple" comes before "banana").</p>
+ <p>if numbers are sorted as strings, "25" is bigger than "100". because "2"
+    is bigger than"1".
+ </p>
+<p>you can the numeric sorting problum by providing a <code>compare function</code></p>
+<p class="text-center">const points = [40, 100, 1, 2,25, 10]; <br>
+points.sort(function(a, b){return a - b}); <br></p>
+<p>use the same trick to sort an array descending:</p>
+<p class="text-center">points.sort(function(a, b){return b - a});</p>
+
+<h3>compare function</h3>
+
+<p>the compare function compares all the values in the array, two values at a time (a, b).</p>
+
+<h3>find min or max with sort()</h3>
+
+<p>after you have sorted an array, you can use the index to obtain the hightest and lowest values.</p>
+<p class="text-center">const points = [40, 100, 1, 2,25, 10]; <br>
+    points.sort(function(a, b){return a - b}); <br></p>
+<p>now <code>points[0]</code>contains the lowest value and points <code>[points.length-1]</code> contains the highest value.</p>    
+
+
+</div>    
+</body>
+</html>

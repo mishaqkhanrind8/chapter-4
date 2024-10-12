@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+
+<script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="./JsConditionalStatement.js"></script>
+</head>
+<body class="text-bg-dark p-2 m-0">
+    <div class="container-fluid user-select-none">
+<h1 class="text-center mt-3">Conditional statement</h1>
+
+<p>very often when you write code, you want to perform different actions for different decisions.</p>
+<p>you can use <code>conditional statements</code> in your code to do this.</p>
+<p>in <code>JavaScript</code> we have the following conditional statements:</p>
+
+<h3>the if conditions</h3>
+
+<p>use <code>if</code> to specify a block of code to be executed. if o specified condition is <code>true.</code></p>
+<p>use the <code>if</code> statement to specify a block of JavaScript code to be executed if a condition is <code>true.</code></p>
+<p class="ms-5"><strong>syntax</strong>  <br>
+if (condition) { <br>
+// block of code to be executed if <br>
+ the condition is true <br>
+}</p>
+<h4>example</h4>
+<p class="ms-5">if (hour &lt; 18) { <br>
+greeting = "good day";}</p>
+<p>the example shows a "good day" greeting if the hour is <code>less than 18:00.</code></p>
+
+<h3>the else statement </h3>
+
+<p>use <code>else</code> to specify a block of code to be executed. if the some condition is <code>false.</code></p>
+<p>use <code>else if</code> to specify a new condition to test. if the first condition is <code>false.</code></p>
+<p>use <code>switch</code> to specify many alternative blocks of code to be executed.</p>
+<p class="ms-5"><strong>syntax</strong> <br>
+if (condition) { <br>
+// block of code to be executed of the condition is true <br>
+} else { <br>
+// block of code to be executed if the condition is false <br>
+}
+</p>
+<h4>example</h4>
+<p>if the hour is less than 18, create a "good day" greeting. otherwise "good evening":</p>
+<p class="ms-5">if (hour &lt; 18) { <br>
+    greeting = "good day"; <br>
+} else   { <br>
+greeting = "good evening"; <br>
+} </p>
+
+<h3>the else if statement</h3>
+<p>use the <code>else if</code> statement to specify a new condition if the first condition is <code>false.</code></p>
+<p class="ms-5"><strong>syntax</strong> <br>
+if (condition_1) { <br>
+// block of code to be executed if condition is true <br>
+} else if (condition_2) { <br>
+    // block of code to be executed if the condition_1 is false and condition_2 is true <br>
+}
+</p>
+
+<h4>example</h4>
+
+<p>if time is <code>less than 10:00.</code> create a "good moring" greeting. <br>
+if not, but time is <Code>less than 20:00.</Code> create a "good day" greeting. <br>
+<code>otherwise</code> a "good evening":</p>
+<p class="ms-5">if (time &lt; 10) { <br>
+greeting = "good morning"; <br>
+} else if (time &lt; 20) {<br>
+greeting = "good day"; <br>
+} else { <br>
+    greeting = "good evening"; <br>
+}
+</p>
+
+</div>
+</body>
+</html>

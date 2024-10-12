@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods</title>
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<style>
+    h1,h2,h3,h4{
+        text-transform: capitalize;
+    }
+</style>
+<script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="./Js-string-method.js"></script>
+</head>
+<body class="text-bg-dark p-2 m-0 user-select-none">
+    <div class="container-fluid">
+
+        <h1 class="text-center">string methods</h1>
+
+    <p>JavaScript provides a variety of string methods that allow you to manipulate and work with strings efficiently.</p>
+<p>All string methods return a new string. they don't modify the original string.</p>
+<p>Strings are immutable: strings cannot be changed, only replaced.</p>
+
+<h2>length property</h2>
+
+<p>the length property returns the length of a string:</p>
+<p class="ms-5">let text = "abcdefghijklmnopqrstuvwxyz"; <br>
+let length = text.length; <br>
+console.log(length); // 26</p>
+
+<h2>extracting string characters</h2>
+
+<p>there are 4 methods for extracting string characters:</p>
+<ul><li>the <code> charAt(position)</code> method</li>
+    <li>the <code>charCodeAt(position)</code> method</li>
+    <li>the <code>at(position)</code> method</li>
+    <li>using <code>property access []</code> like in arrays</li></ul>
+
+<h2>charAt() method</h2>
+
+
+<p>the <code>charAt()</code> method returns the character at a specified index (position) in a string:</p>
+<p class="ms-5">let text = "HELLO WORLD" ; <br>
+let char = text.charAt(0); <br>
+console.log(char); // H</p>
+
+<h2>charCodeAt() method</h2>
+
+<p>the <code>charCodeAt()</code> method returns the code of the character at a specified index in a string:</p>
+<p>this method returns a UTF-16 code (an integer between 0 and 65535).</p>
+<p class="ms-5">
+    let text = "HELLO WORLD" ; <br>
+    let char = text.charCodeAt(0); <br>
+    console.log(char); // 72
+</p>
+
+<h2>at() method</h2>
+
+<p>ES2022 introduced the string method <code>at()</code> </p>
+<p>the <code>at()</code> method is a new addition to JavaScript.</p>
+<p>it allows the use of negative indexes while <code>charAt()</code> do not:</p>
+<p class="ms-5">
+    const name = "smash code"; <br>
+    let letter = name.at(2); // a <br>
+    let neg_letter = name.at(-2); // o
+</p>
+
+<h2>property access</h2>
+
+<p class="ms-5">
+    let text = "HELLO WORLD" ; <br>
+    let char = text[1]; <br>
+console.log(char); // E</p>
+<p>property access might be a little unpredictable:</p>
+<p>it makes strings look like <code>arrays</code> (but they are not)</p>
+<p>if no character is found [] returns undefined, while <code>charAt()</code> returns on empty string.</p>
+<p>it is read only str(0) = "A" gives no error (but does not work!)</p>
+
+<h2>extracting string parts</h2>
+
+<p>there are 3 methods for extracting a part of a string:</p>
+<ul><li>slice(start, end)</li>
+    <li>substring(start, end)</li>
+    <li>substr(start, length)</li></ul>
+
+<h2>slice() method</h2>
+
+    <p><code>Slice()</code> extracts a part of a string and returns the extracted part in a new string.</p>
+<p>the method takes 2 parameters : start position, and end position (end not included).</p>
+<p class="ms-5">
+    let text = "Apple, Banana, Kiwi"; <br>
+    let part = text.slice(7, 13); <br>
+    console.log(part); // Banana
+</p>
+<p>if you omit the second parameter, the method will slice out the rest of the string.</p>
+<p>if a parameter is negative, the position is counted from the end of the string.</p>
+<p class="ms-5">
+    let text = "Apple, Banana, Kiwi"; <br>
+    let part = text.slice(7); <br>
+    console.log(part); // Banana, Kiwi <br>
+    <br>
+    let neg_part = text.slice(-5); <br>
+    console.log(neg_part); // Kiwi
+</p>
+
+<h2>substring () method</h2>
+
+<p><code>substring()</code> is similar to <code>slice()</code></p>
+<p>the difference is that start and end values less than 0 are treated as 0 in <code>substring()</code>.</p>
+<p class="ms-5">
+    let text = "Apple, Banana, Kiwi"; <br>
+    let part = text.substring(7, 13); <br>
+    console.log(part); // Banana
+</p>
+
+<h2>substr() method</h2>
+
+<p><code>substr()</code> is similar to <code>slice()</code></p>
+<p>the difference is that the second parameter specifies the length of the extracted part,</p>
+<p class="ms-5">
+    let text = "Apple, Banana, Kiwi"; <br>
+    let part = text.substring(7, 6); <br>
+    console.log(part); // Banana
+</p>
+
+<h2>upper and lower case</h2>
+
+<p>A string is converted to upper case with <code>toUpperCase()</code>.</p>
+<p>A string is converted to lowercase with <code>toLowerCase()</code>.</p>
+<p class="ms-5">
+    let text1 = "Smash Code"; <br>
+    let text2 = text1.toUpperCase(); // SMASH CODE <br>
+    let text2 = text1.toLowerCase(); // smash code
+</p>
+
+<h2>concat() method</h2>
+
+<p class="ms-5">
+    let text1 = "Smash"; <br>
+    let text2 = "Code"; <br>
+    let text3 = text1.concat(" " , text2); <br>
+    console.log(text3); // Smash Code
+</p>
+
+
+
+</div>
+</body>
+</html>

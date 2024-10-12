@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+<style>
+h1,h2,h3,h4{
+    text-transform: capitalize;
+}
+</style>
+<script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+<script src="./jsFunction.js"></script>
+</head>
+<body class="text-bg-dark p-2 m-0 user-select-none">
+<div class="container-fluid">
+
+<h1 class="text-center mt-3">JavaScript Functions</h1>
+
+<p>functions are important in JavaScript and act like <code>building blocks</code>.</p>
+<p>they perform tasks or <code>calculations</code> based an input and output.</p>
+<p>for a procedure to be a function, it should <code>take input and produce output.</code></p>
+<p>functions need to be defined where they are going to be used,</p>
+<p>they help avoid repeating the same code and make programs easier to manage.</p>
+<p>functions allow breaking down big programs into smaller, more manageable ports.</p>
+
+<h3>function syntax</h3>
+
+<p>a JavaScript functions is defined with the <code>function keyword</code>, followed by a name, followed by parentheses().</p>
+<p>function names can contain <code>letters</code>, <code>digits</code>, <code>underscores</code> and <code>dollar signs</code> (same 
+rules as variables),</p>
+<p>the parentheses may include parameter names separated by commas:</p>
+<p>(parameter1, parameter2,...)</p>
+<p>the code to be executed, by the function, is placed inside <code>curly brackets{} </code></p>
+<p class="ms-5">function name (parameter1, parameter2, parameter3) { <br>
+    // code to be executed <br>
+} <br>
+// function to compute the product of p1 and p2 <br> <br>
+function myfunction (p1, p2) { <br>
+console.log(p1 * p2); <br>
+} </p>
+
+<h2>calling function</h2>
+
+<p>function can be called , or executed, elsewhere in code using parentheses following the function name.</p>
+<p>when a function is called, the code inside its function body runs.</p>
+<p class="text-center">// defining the function <br>
+function sum(num1, num2) {  <br>
+return num1 + num2; <br>
+} <br>
+// calling the function <br>
+console.log(sum(2, 4)); <br>
+// output 6</p>
+
+<h2>parameter vs argument</h2>
+
+<p><code>parameter:</code> Variables in the function declaration that act as placeholders for values that 
+the function expects to receive when it's called.</p>
+<p><code>Arugment:</code> Actual values passed to the function when it is called.</p>
+<p class="ms-5">function greet(name) { // 'name' is a parameter <br>
+    console.log("hello", + name + "!" ); <br>
+    } <br>
+greet("ishaq-khan"); // "ishaq-khan" is an argument</p>
+
+<h2>default values</h2>
+
+<p>functions can also be defined with default values for one, or all of the parameters,</p>
+<p>if no arguments are passed the default values are used, if arguments are incluted they will overirde the default values.</p>
+
+<h2>function return</h2>
+
+<p>when a function is called, it executes its code and evaluates a result, which by default is <code>undefined</code></p>
+<p>to capture and return a value from a function. the <code>return keyword</code> is used.</p>
+<p>once a function finds a return statement, it <code>stops working</code> and hands back whatever it found.</p>
+<p>the <code>return</code> keyword allows functions to produce an output, which can be stored in a <code>variable</code> for further use,</p>
+<div class="row">
+    <div class="col-md-6">
+        <h4>without return</h4>
+        <p class="ms-1">
+        function add(a, b) { <br>
+            let sum = a + b; <br>
+        } <br>
+        let result = add(3, 5); <br>
+console.log(result); <br>
+// output : undefined
+    </p></div>
+    <div class="col-md-6">
+        <h4>with return</h4>
+        <p class="ms-1">function add(a, b) {  <br>
+return a + b;    <br>
+} <br>
+let result = add(3, 5); <br>
+console.log(result); <br>
+// output : 8</p>
+    </div>
+</div>
+
+<h2>function experssion</h2>
+
+<p>A JavaScript function expression is a way to define a function in JavaScript by assigning it to a variable.</p>
+<p>Unlike function declarations, where the function name is mandatory, function expressions allow you to create 
+    anonymous functions or to assign a name to the function, here's an example of a function expression:
+</p>
+<p class="text-center">let add = function(x, y) { <br>
+    return x + y; <br>
+    }</p>
+<p>In this example, add is a variable that holds an anonymous function.</p>
+<p>This function takes two parameters (x and y) and returns their sum.</p>
+<p>Since it's assigned to a variable, you can use the add variable to call this function later in your code:</p>
+<p class="text-center">console.log(add(3, 5)); // output is : 8</p>
+
+<h2>arrow function</h2>
+
+<p>Arrow functions, introduced in ECMAScript 6 (ES6), provide a conise syntax for writing JvaScript functions.</p>
+<div class="row text-center">
+    <div class="col-md-6">
+        <h4>traditional function expression:</h4>
+    <p>let add = function(x, y) { <br>
+        return x + y; <br>
+        };
+    </p>
+    </div>
+    <div class="col-md-6">
+        <h4>arrow function</h4>
+        <p>let add = (x, y) => x + y;</p>
+    </div></div>
+
+    <h2>function scope</h2>
+
+    <p>variables declared outside of any function have <code>global scope.</code></p>
+     <p>they can be accessed from anywhare in the code,  including inside functions.</p>
+<p>global variables are accessible throughout athe entire program.</p>
+<p>variables declared whtin a function have <code>local scope.</code></p>
+<p>they are accessible only whithin that function and not outside of it.</p>
+<p>local variables have a limited lifespan and are destoryed once the function finishes executing.</p>
+<div class="row text-center">
+    <div class="col-md-6"><h4>global scope</h4>
+    <p>let globalvar = 10; <br>
+    function myfunction() { <br>
+        console.log(globalvar);
+    } <br>
+myfunction() ; //output : 10 <br>
+console.log(globalvar); // output: 10
+</p></div>
+<div class="col-md-6">
+    <h4>local scope</h4>
+    <p>function myfunction() { <br>
+    let localvar = 20; <br>
+    console.log(localvar); // output : 20 <br>   
+    } <br>
+myfunction();  // output: 20 <br>
+cnsole.log(localvar); // error 
+</p>
+</div>
+</div>
+
+
+
+
+</div>    
+</body>
+</html>
