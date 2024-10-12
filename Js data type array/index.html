@@ -238,7 +238,7 @@ fruits.indexOf("banana", 2)  // returns 4</p>
 <h3>the lastIndexOf() method</h3>
 
 <p><code>array.lastIndexOf()</code> is the same as <code>array.indexOf()</code> but returns the position of the last occurrence
-     of the spacified element.</p>
+     of the specified element.</p>
 
  <h3>sorting and reversing</h3>
 
@@ -246,7 +246,7 @@ fruits.indexOf("banana", 2)  // returns 4</p>
 <p class="text-center">
     const fruits = ["banana", "orange", "apple", "mango", "banana"]; <br>
     fruits.sort() <br>
-    // result : 'apple' , 'banana' , 'banana', 'mango', 'orange'
+    // result: 'apple', 'banana', 'banana', 'mango', 'orange'
 </p>
 <p>the <code>reverse()</code> method reverses the elements in an array; </p>
 <p class="text-center">
@@ -259,31 +259,31 @@ fruits.indexOf("banana", 2)  // returns 4</p>
 
 <p>ES2023 added the <code>toSorted()</code> method as a safe way to sort an array without altering the original array.</p>
 <p>the diffeence between <code>toSorted()</code> and <code>sort()</code> is that the first method creates a new array. keeping
-     the original array unchanged. while the last method alters the original array.</p> 
+     the original array unchanged. While the last method alters the original array.</p> 
 <p class="text-center">
-    consst months = ["jan", "feg", "mar", "apr"]; <br>
-    const sorted = months.toSort(); <br></p>
+    consist months = ["Jan", "Feg", "mar", "apr"]; <br>
+    const sorted = months.sort(); <br></p>
 
 <h3>numeric sort</h3>
 
 <p>by default, the <code>sort()</code> function sorts values as trings.</p>
-<p>this works well for strings ("apple" comes before "banana").</p>
- <p>if numbers are sorted as strings, "25" is bigger than "100". because "2"
+<p> This works well for strings ("apple" comes before "banana").</p>
+ <p> If numbers are sorted as strings, "25" is bigger than "100". because "2"
     is bigger than"1".
  </p>
-<p>you can the numeric sorting problum by providing a <code>compare function</code></p>
+<p>you can the numeric sorting problem by providing a <code>compare function</code></p>
 <p class="text-center">const points = [40, 100, 1, 2,25, 10]; <br>
 points.sort(function(a, b){return a - b}); <br></p>
-<p>use the same trick to sort an array descending:</p>
+<p> Use the same trick to sort an array descending:</p>
 <p class="text-center">points.sort(function(a, b){return b - a});</p>
 
 <h3>compare function</h3>
 
-<p>the compare function compares all the values in the array, two values at a time (a, b).</p>
+<p> The compare function compares all the values in the array, two values at a time (a, b).</p>
 
 <h3>find min or max with sort()</h3>
 
-<p>after you have sorted an array, you can use the index to obtain the hightest and lowest values.</p>
+<p> After you have sorted an array, you can use the index to obtain the highest and lowest values.</p>
 <p class="text-center">const points = [40, 100, 1, 2,25, 10]; <br>
     points.sort(function(a, b){return a - b}); <br></p>
 <p>now <code>points[0]</code>contains the lowest value and points <code>[points.length-1]</code> contains the highest value.</p>    
