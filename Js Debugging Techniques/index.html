@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging Techniques</title>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        h1, h2, h3, h4 {
+            text-transform: capitalize;
+        }
+    </style>
+    <script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Debugging-Techniques.js"></script>
+</head>
+<body class="text-bg-dark p-2 m-0 border-0 user-select-none">
+    <div class="container-fluid">
+<h1 class="text-center">
+    Debugging Techniques
+</h1>
+
+<h2>code debugging</h2>
+
+<p>Programming code might contain <code>syntax errors,</code> or <code>logical errors</code>.</p>
+<p>Many of these errors difficult to diagnose.</p>
+<p>Often, when programming code contains errors, nothing will happen. there are no error messages, and you will get no
+     indications where to search for errors.</p>
+<p>Searching for (and fixing) errors in programming code is called code <code>debugging</code></p>
+
+<h2>developer tools</h2>
+
+<p>Modern browsers come with <code>built-in developer tools</code> that are essential for debugging JavaScript. These tools
+    typically include</p>
+<ul>
+    <li>A <code>console</code> for logging messages and inspecting variables.</li>
+<li>A <code>debugger</code> for setting breakpoints and stepping through code line by line.</li>
+<li>An elements inspector for examining the DOM structure and styles of your web page.</li>
+</ul>
+
+<h2>console.log() method</h2>
+
+<p>A fundamental debugging technique is using the <code>console.log()</code> method.</p>
+<p>This method allows you to print messages and variable values to the browser console.</p>
+<p>You can strategically place <code>console.log()</code> statements throughout your code to track the execution flow and
+     isnpect variable values at different points.</p>
+
+<h2>debugger statment</h2>
+
+<ul>
+    <li>Way to pause code execution is using the <code>debugger</code> statment.</li>
+    <li>When the code reaches a line with the debugger statement. execution stops, and you can use the browser's debugger tools
+        to investigate.
+    </li>
+</ul>
+<p class="ms-5">
+    function myFunction() { <br>
+    let x = 10; <br>
+    debugger; <br>
+    cosole.log("The value of x is ", + x); <br>
+    }
+</p>
+
+<h2>try and catch blocks method</h2>
+
+<p>try...catch blocks are used to handle executions in JavaScript code.</p>
+<p>Wrap the code that you suspect might throw an error inside a try block, and use the catch block to handle any errors
+     that occur.</p>
+<p class="ms-5">
+    try { <br>
+// code that might throw and error <br>
+} catch(error) { <br>
+cosole.error("An error occured: ", + error); <br>
+}
+</p>
+
+</div>
+</body>
+</html>

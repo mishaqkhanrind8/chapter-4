@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous programming</title>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-utilities.min.css">
+<style>
+    h1, h2, h3, h4 {
+        text-transform: capitalize;
+    }
+</style>
+<script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="./asynchronous.js"></script>
+</head>
+<body class="text-bg-dark p-2 m-0 user-select-none bd-example">
+    <div class="container-fluid">
+<h1 class="text-center">
+    Asynchronous programming
+</h1>
+
+<p><code>Asynchronous programming</code> lets JavaScript do multiple things at once. making apps faster and smoother.</p>
+<p>In JavaScript, <code>asynchronous programming</code> is crucial for handling operations that may take time, such as
+     fetching data from a server or reading a file.</p>
+<p>It's like cooking while waiting for water to boil, you don't just store at the pot, you do other tasks too!.</p>
+
+<h2> difference between synchronous and asynchronous </h2>
+
+<p><code>Synchronous</code> code executes line by line, blocking further execution until each line finishes.</p>
+<p><code>Aynchronous</code> code allows multiple tasks to be executed simultaneously without blocking the main thread
+     (lik fetching data).</p>
+<p class="ps-5"><img src="../assest/asynchronous.jpg" alt="asynchronous diagram not shown in your browser" width="85%"
+     aria-placeholder="asynchronous example picture"></p>
+
+     <h2>callback functions</h2>
+<p><code>Callback functions</code> are like leaving a note for someone to call you back when they're done with a task.</p>
+<p>They're used in JavaScript to handle tasks that take time. like leading data from a server.</p>
+<p class="ms-5">
+function myFunction(callback) { <br>
+setTimeout(() => { <br>
+const data = { name: "Aman", age: 21}; <br>
+callback(data); <br>
+}, 3000); <br>
+} <br>
+myFuction((data) => { <br>
+console.log("data: ", data); <br>
+} );
+</p>
+
+<h2>promises</h2>
+
+<p>Promises are like a promise to do something, but you don't know when it will be done.</p>
+<p>They're great for handling tasks that my succeed or fail, like tetching data from a server.</p>
+<p class="ms-5">
+    function mydata() { <br>
+return new promise((resolve, reject) => { <br>
+setTimeout(() => { <br>
+const data = {name: "Ishaq", age; 23}; <br>
+resolve(data); <br>
+}, 2000); <br>
+}); <br>
+    } <br>
+    mydata() <br>
+    .then((data) => console.log("Data", data)) <br>
+    // output: data: {name: "ishaq" , age: 23} <br>
+.catch((error) => console.error("Error", error)); <br>
+</p>
+
+<h2>async/Await</h2>
+
+<p>Async functions enable writing asynchronous code in a synchronous-like manner using the async and await keywords.</p>
+<p><code>async</code> makes a function return a promise</p>
+<p><code>await</code> makes a function wait for a promise</p>
+<p class="ms-5">
+    function fetchData() { <br>
+return new promise((resolve, reject) => { <br>
+setTimeout(()=> { <br>
+resolve("Data received"); <br>
+}, 2000); <br>
+}); <br>
+    } <br>
+    fetchData() <br>
+    .then(data => console.log(data)) <br>
+    // output: Data received (after 2 seconds) <br>
+.catch(error => console.error(error));
+</p>
+
+<h2>resolve and reject</h2>
+<p>the two arguments <code>(resolve and reject)</code> are pre-defined by JavaScript.</p>
+<p>we will not create them, but call one of them when the executor function is ready.</p>
+<p>Very often we will not need a reject function.</p>
+
+
+
+    </div>
+</body>
+</html>

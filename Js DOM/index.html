@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<style>
+    h1, h2, h3, h4 {
+text-transform: capitalize;
+    }
+    .zoom-5 {
+        zoom: 130%;
+    }
+</style>
+<script src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="text-bg-dark p-2 m-0 bd-example user-select-none border-0">
+<div class="container-fluid">
+
+    <h1 class="text-center">
+ Document object model
+</h1>
+
+<h2>what is DOM</h2>
+
+<p id="myId">The <code>Document Object Model (DOM)</code> is a programming interface for web documents.</p>
+<p>It represents the structure of an HTML document as a tree-like sturcture where each node represents a part of
+     the document.</p>
+<p class="myClass">The <code>DOM</code> provides a way for programs to manipulate the structure, content, and style of web 
+    documents dynamically.</p>
+<p>The HTML DOM is a <code>standard object model</code> and programming interface for HTML it defines:</p>
+<ul class="myClass">
+    <li>The HTML element as <code>objects</code></li>
+    <li>The <code>properties</code> of all HTML elements</li>
+    <li>The <code>methods</code> to access all HTML elements</li>
+    <li>The <code>events</code> for all HTML elements</li>
+</ul>
+<p>In other words: The HTML DOM is a standard for <code>how to get, change, add, or delete</code> HTML elements.</p>
+<p>With the <code>object model</code> JavaScript gets all the power it needs to create dynamic HTML:</p>
+<ul>
+    <li>JavaScript can change all the <code>HTML elements</code> in the page</li>
+    <li>JavaScript can change all the <code>HTML attributes</code> in the page</li>
+    <li>JavaScript can change all the <code>CSS styles</code> in the page</li>
+    <li>JavaScript can <code>remove</code> existing <code>HTML elements</code> and <code>attributes</code></li>
+    <li>JavaScript can <code>add</code> new <code>HTML elements</code> and <code>attributes</code></li>
+    <li>JavaScript can <code>react</code> to all existing <code>HTML events</code> in the page</li>
+    <li>JavaScript can <code>create</code> new <code>HTML events</code> in the page</li>
+</ul>
+
+<div class="row">
+    <div class="col-md-8 mx-auto myClass">
+<table class="table border border-4 border-secondary">
+<tr><th class="text-bg-primary col-sm-6">Static</th><th class="text-bg-success col-sm-6">Dynamic</th></tr>
+<tr><td>Unchanging HTML, CSS, and JS files</td><td>HTML, CSS, and JS files that can be generated with a backend langauge</td></tr>
+<tr><td>Typically faster load times</td><td>Typically Slower load times</td> </tr>
+<tr><td>Rendering takes place in the browser</td><td>Rendering takes place in the server</td></tr>
+</table>
+</div>
+</div>
+
+<h2>methods to access elements</h2>
+
+<ul>
+    <li>getElementById</li>
+    <p class="ms-5"> let element = document.getElementById(myId) <br>
+    console.log(element); <br>
+// outputs the element with ID 'myId'</p>
+
+<li>getElementsByClassName</li>
+<p class="ms-5">let elements = document.getElementsByClassName('myClass'); <br>
+cnsole.log(elements); <br>
+// outputs a collection of elements with class 'myClass'</p>
+
+<li>getElementsByTagName</li>
+<p class="ms-5"> let elements = document.getElementByTagName('div'); <br>
+console.log(elements); <br>
+// outputs a collection of &lt;div&gt; elements
+</p>
+
+<li><code> querySelector:</code> Selects the first element that matches a CSS selector.</li>
+<p class="ms-5">
+    let element = document.querySelector('.myClass'); <br>
+    console.log(element); <br>
+    // outputs the first element with class 'myClass'
+</p>
+
+<li>querySelectorAll: Selects all elements that match a CSS selector.</li>
+<p class="ms-5">
+    let element = document.querySelectorAll('.myClass'); <br>
+    console.log(element); <br>
+    // outputs a NodeLsit of all &lt;div&gt; elements with
+</p>
+</ul>
+
+<h2>DOM manipulation</h2>
+
+<h4>manipulating DOM elements</h4>
+
+<ul><li>innerHTML: Sets or gets the HTML content inside an element.</li>
+<p class="ms-5">
+    element.innerHTML = '&Lt;p&gt;New content&lt;/p&gt;';
+</p>
+<li>textContent: Sets or gets the text content inside an element.</li>
+<p class="ms-5">
+    element.textContent = 'New text content';
+</p>
+<li>setAttribute: Sets an attribute on an element.</li>
+<p class="ms-5">
+    element.setAttribute('class', 'newClass'); 
+</p>
+<li>getAttribute: Gets the value of an attribute on an element.</li>
+<p class="ms-5">
+    let value = element.getAttribute('class');
+</p>
+<li>Changin Styles : Sets or gets a CSS property.</li>
+<p class="ms-5">
+    element.style.color = 'blue';
+</p>
+</ul>
+
+<h2>event handling</h2>
+
+<ul><li>Event are actions or occurrences that happen in the browser. such as clicks, key pressess, or mouse movements.</li></ul>
+<p class="zoom-5">Common Event Types:</p>
+<ul>
+<li><code>click:</code>When an element is clicked</li>
+<li><code>mouseover:</code>When the mouse pointer is over and element.</li>
+<li><code>keyup:</code> When a key is released.</li>
+<li><code>submit:</code> When a form is submitted.</li>
+<li><code>Load:</code> When the page has loaded.</li>
+<li><code>DOMContentLoaded:</code> When the initial HTML document has been completely loaded and parsed.</li></ul>
+
+<ul><li>addEventListener: Attaches an event handler to an element.</li>
+<p class="ms-3">
+    element.addEventListener('click', function() { <br>
+    alert('Element clicked!'); <br>
+    });
+</p></ul>
+
+<button id="myBtn" class="btn btn-light btn-lg rounded rounded-5 mb-3 ms-5">Collect</button>
+<p id="demo">Dear Customer! &nbsp; &nbsp; &nbsp; &nbsp; Click over on upper button to claim your reward!</p>
+
+</div>    
+<script src="./Js-DOM.js" >
+    </script>
+</body>
+</html>

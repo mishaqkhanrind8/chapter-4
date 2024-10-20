@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Local Storage</title>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<style>
+    h1, h2, h3, h4 {
+        text-transform: capitalize;
+    }
+</style>
+<script
+ src="../../Bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="text-bg-dark p-2 m-0 border-0 bd-example user-select-none">
+    <div class="container-fluid">
+<h1 class="text-center">
+    JavaScript Local Storage
+</h1>
+
+<h2>local storage</h2>
+
+<p><code>local storage</code> is a way to <code>store data</code> on the user's browser.</p>
+<p>it's like a small database that lives inside your web browser. This storage persists even after you close the browser.</p>
+<p>local storage is a <code>window object property</code>, which makes it a global object that can interact with and 
+    manipulate the browser window.</p>
+
+<h2>window.localStorage</h2>
+
+<p>The localStorage mechanism is available via the <code>window.localStorage</code> property.</p>
+<p><code>Window.localStorage</code> is part of the window interface in JavaScript, which represents a window containing
+     a DDM document.</p>
+<p>THe window interface features a wide rang of functions, constructors, objects, and namespaces.</p>
+<p><code>WIndow.localStorage</code> is a read-only property that returns a refernce to the local storange abject used to 
+    store data that is only accessible to the origin that created it.</p>
+
+    <h2>when to use localStorage?</h2>
+
+<p>Put simply, <code>localStorage</code> is used for <code>storing</code> and <code>retrieving data</code>, While you can
+     store small amounts of data with <code>localStorage</code>, it's not suitable for large datasets.</p>
+<p><code>localStorage</code> is accessible to anyone who uses the device, so you shouldn't use it to store sensitive information.</p>
+<p>You can use it to store user preferences, like language or theme.</p>
+<p>You can also use it to cache data if you use it frequently.</p>
+<p><code>localStorage</code> can store form data that won't be lost if the user closes the browser.</p>
+<p>if you have an application that requires you to log in, <code>localStorage</code> can be used to keep your session data.</p>
+<p>You can remain logged in even after closing and reopening the browser.</p>
+
+<h2>where is localStorage stored?</h2>
+
+<p><code>LocalStorage</code> is stored within the browser itself.</p>
+<p>Each browser (e.g., Chrome, firefox, Safari) has its own implementation and storage location for this data.</p>
+<p>On a lower level, <code>localStorage</code> is seved to the file system of your device.</p>
+<p>For instance, in Chrome, it's stored in the user's profile directory under a specific file path, which varies
+     depending on the operating system.</p>
+<p><code>WIndows:</code> C:\User\&lt;YourUsername&gt;\AppData\Local\Google\Chrome\User Data\Default\Local Storage</p>
+<p><code>macOS:</code> -/Library/application Support/Google/Chrome/Default/Local Storage</p>
+<p><code>Linux:</code> -/config/google-chrome/Default/Local Storage</p>
+
+<h2>key features</h2>
+
+<p>Data stored in local storage presists even after the broser is closed or the computer is restored.</p>
+<p>Each webiste can store up to <code>5MB of data</code> in local storage. which is sually enough for stroing user preferences.
+     settings, or small omounts of data.</p>
+<p>Local storage can only store <code>strings</code>.</p>
+<p>This means if you need to store values like objects or arrays, you first need to get a string representation of the value.
+You do this using the <code>JSON.stringify()</code> method.</p>
+
+
+    </div>
+    <script>
+console.log("I am a fronend-developer from Pakistan");
+
+
+    </script>
+</body>
+</html>
